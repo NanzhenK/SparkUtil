@@ -27,11 +27,13 @@ public class StringUtils {
         return s.replaceAll("[\\pP\\pS\\pM\\pC&&[^.-]]"," "); // 除了 .- 以外的符号，用交集排除
     }
     
-    public stati String cleanNumbre(String s){
+    public static String cleanNumbre(String s){
         return s.replaceAll("[\\d]"," ");
     }
     
-        
+    public static String ajoutSpace(String s){
+        return s.replaceAll("[0-9]+", " $0 "); //数字组合的前后加空格比如 s56s 变为 s 56 s
+    }
     
     
     
